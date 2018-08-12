@@ -1,0 +1,3 @@
+[submodule "Repos/nvcc4jupyter"]
+	path = Repos/nvcc4jupyter
+	url = https://github.com/saurabhjadhav1911/nvcc4jupyter.git
