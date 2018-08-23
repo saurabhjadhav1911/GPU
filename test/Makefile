@@ -56,8 +56,11 @@ APP=app
 #student_func.o: student_func.cu reference_calc.cpp utils.h
 #	nvcc -c student_func.cu $(NVCC_OPTS)
 
-$(APP):main.o
-	$(CPP) main.o -o $(APP)
+$(APP):main.o code.o
+	$(nvcc) -o $(APP) main.o code.o
+
+code.o:$(CUDA_SRC)
+	$(NVCC) -c $(CUDA_SRC) 
 
 main.o:$(CPP_SRC)
 	$(CPP) -c $(CPP_SRC)

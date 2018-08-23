@@ -31,6 +31,7 @@ int main( int argc, char** argv ) {
       return -1;
     }
   
+
   namedWindow( "Display window",WINDOW_AUTOSIZE );
   imshow( "Display window", image );
   
